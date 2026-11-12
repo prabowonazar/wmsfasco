@@ -33,7 +33,14 @@ jobs:
       - name: Convert Web to Android with Capacitor
         run: |
           npm install --legacy-peer-deps @capacitor/core @capacitor/cli @capacitor/android
-          npx cap init "WMS Fasco" "com.wmsfasco.app" --web-dir dist
+          cat << 'EOF' > capacitor.config.json
+          {
+            "appId": "com.wmsfasco.app",
+            "appName": "WMS Fasco",
+            "webDir": "dist"
+          }
+          EOF
+          rm -f capacitor.config.ts
           npx cap add android
           npx cap sync android
 

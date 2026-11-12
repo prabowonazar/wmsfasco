@@ -25,14 +25,14 @@ jobs:
           java-version: '17'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Build Web App (Vite)
         run: npm run build
 
       - name: Convert Web to Android with Capacitor
         run: |
-          npm install @capacitor/core @capacitor/cli @capacitor/android
+          npm install --legacy-peer-deps @capacitor/core @capacitor/cli @capacitor/android
           npx cap init "WMS Fasco" "com.wmsfasco.app" --web-dir dist
           npx cap add android
           npx cap sync android

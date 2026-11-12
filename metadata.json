@@ -1,0 +1,6 @@
+{
+  "name": "ScanGudang Mobile - Warehouse WMS",
+  "description": "Aplikasi mobile warehouse untuk scan barcode log, hitung stok opname, barang masuk/keluar, kartu stok, sinkron spreadsheet, dan pencocokan Accurate.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
